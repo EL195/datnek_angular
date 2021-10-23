@@ -1,0 +1,25 @@
+{
+    "lang": {
+        "addLang": "Voeg een taal toe",
+        "language": "Taal",
+        "chooseLanguage": "Kies een taal",
+        "chooseElement": "Kies een element",
+        "levelWrote": "Niveau geschreven",
+        "levelSpoken": "Gesproken niveau",
+        "levelUndesrtood": "Niveau van begrip",
+        "save": "Opslaan",
+        "languageCount": "Aantal talen",
+        "modalClosed": "Modaal gesloten",
+        "modalOpened": "Modal open",
+        "languageList": "Lijst van talen",
+        "intermediary": "tussenpersoon",
+        "elementary": "elementair",
+        "current": "huidig",
+        "delete": "Verwijderen",
+        "update": "Wijzigen",
+        "details": "details",
+        "french": "Frans",
+        "english": "Engels",
+        "nederlands": "nederlands"
+    }
+}

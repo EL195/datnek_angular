@@ -1,19 +1,38 @@
-<!-- nav -->
-<nav class="navbar navbar-expand navbar-dark bg-dark">
-  <div class="navbar-nav">
-      <a class="nav-item nav-link" routerLink="/">Home</a>
-      <a class="nav-item nav-link" routerLink="/login">Login</a>
-      <a class="nav-item nav-link" routerLink="/register">Register</a>
-  </div>
-</nav>
 
-<!-- main content container -->
-<div class="jumbotron">
-  <div class="container">
-      <div class="row">
-          <div class="col-sm-8 offset-sm-2">
-              <router-outlet></router-outlet>
-          </div>
+<div class="container">
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Datnek Angular</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              {{ 'lang.language' | translate }}
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li class="dropdown-item">{{ 'lang.chooseLanguage' | translate }}</li>
+              <li><hr class="dropdown-divider"></li>
+              <li class="dropdown-item" (click)="useLanguage('en')">{{ 'lang.english' | translate }}</li>
+              <li class="dropdown-item" (click)="useLanguage('fr')">{{ 'lang.french' | translate }}</li>
+              <li class="dropdown-item" (click)="useLanguage('nl')">{{ 'lang.nederlands' | translate }}</li>
+            </ul>
+          </li>
+        </ul>
+        <form class="d-flex">
+          <button class="btn btn-outline-success" type="submit">{{ 'lang.modalClosed' | translate }}</button>
+        </form>
       </div>
+    </div>
+  </nav>
+
+  <div class="container-fluid">
+    <router-outlet></router-outlet>
   </div>
 </div>
+
+
+
+

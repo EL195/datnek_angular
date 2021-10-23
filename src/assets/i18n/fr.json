@@ -1,0 +1,25 @@
+{
+    "lang": {
+        "addLang": "Ajouter une langue",
+        "language": "Langue",
+        "chooseLanguage": "Choisir une langue",
+        "chooseElement": "Choisir un élément",
+        "levelWrote": "Niveau écrit",
+        "levelSpoken": "Niveau parlé",
+        "levelUndesrtood": "Niveau de compréhension",
+        "save": "Enregistrer",
+        "languageCount": "Nombre de langues",
+        "modalClosed": "Modal fermé",
+        "modalOpened": "Modal overt",
+        "languageList": "Liste des langues",
+        "intermediary": "Intermédiare",
+        "elementary": "Elémentaire",
+        "current": "Courant",
+        "delete": "Supprimer",
+        "update": "Modifier",
+        "detail": "Détail",
+        "french": "Français",
+        "english": "Anglais",
+        "nederlands": "Néerlandais"
+    }
+}
