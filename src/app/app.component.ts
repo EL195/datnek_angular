@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import {TranslateService} from '@ngx-translate/core';
+import { ApiService } from './services/api.service';
 
 @Component({
   selector: 'app-root',
@@ -10,7 +11,8 @@ export class AppComponent {
   title = 'datnek-angular';
   //Injection TranslateService dans le constructeur.
   constructor(
-    private translate: TranslateService
+    private translate: TranslateService,
+    public con: ApiService,
     ) 
     {
       translate.setDefaultLang('en');
@@ -20,4 +22,6 @@ export class AppComponent {
       this.translate.use(lanID);
       // Afficher la langue actuelle
     }
+
+    
 }

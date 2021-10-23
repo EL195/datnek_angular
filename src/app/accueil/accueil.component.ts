@@ -9,12 +9,14 @@ import { ApiService } from '../services/api.service';
 export class AccueilComponent implements OnInit {
   // Varible pour recupérer les langues
   items: any;
+  itemSelected : any;
 
   //Déclarations des variables du formulaire
   langue : any;
   speak : any;
   write : any;
   under : any;
+  clicked: boolean = false;
 
   constructor(
     private con: ApiService,
@@ -43,11 +45,44 @@ export class AccueilComponent implements OnInit {
         ecrit : this.write
       };
       console.log(newer);
-    }
-/*     this.con.AddData("langue").subscribe( async (data:any)=>{
+      this.con.addData("langue", newer).subscribe( async (data:any)=>{
         console.log(data);
         this.items = data;
-      }) */
+      }) 
+    }
+
   }
+
+  moadalOpen(item:any){
+   // console.log(item);
+    this.clicked = true;
+    this.itemSelected = item;
+    this.con.changeButonStatus();
+
+  }
+
+  // Afficher un langue sélectionnée
+  moadalclose(){
+    // console.log('ici');
+     this.con.disableModal();
+   }
+
+   update(id:any){
+    // console.log('ici');
+     let donnees = {
+       id : id
+     }
+     this.con.disableModal();
+     this.con.getData("langue/"+donnees).subscribe( async (data:any)=>{
+      console.log(data);
+      this.items = data;
+    })
+   }
+
+
+   delete(id:any){
+    // console.log('ici');
+     this.con.disableModal();
+   }
 
 }

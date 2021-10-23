@@ -22,7 +22,8 @@
           </li>
         </ul>
         <form class="d-flex">
-          <button class="btn btn-outline-success" type="submit">{{ 'lang.modalClosed' | translate }}</button>
+          <button *ngIf="con.clicked==false" class="btn btn-outline-success" type="submit">{{ 'lang.modalClosed' | translate }}</button>
+          <button *ngIf="con.clicked==true" class="btn btn-outline-success" type="submit">{{ 'lang.modalOpened' | translate }}</button>
         </form>
       </div>
     </div>

@@ -8,7 +8,7 @@ import { retry, catchError } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class ApiService {
-
+  clicked : boolean = false;
 
   httpHeader = {
     headers: new HttpHeaders({
@@ -67,4 +67,16 @@ handleError(error: HttpErrorResponse) {
   return throwError(
     'Something bad happened; please try again later.');
 };
+
+changeButonStatus(){
+  console.log('true');
+  this.clicked = true;
+ // return true;
+}
+
+disableModal(){
+  console.log('true');
+  this.clicked = false;
+ // return true;
+}
 }
