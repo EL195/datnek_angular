@@ -25,7 +25,6 @@ export class OtherComponent implements OnInit {
 
  ngOnInit(): void {
 
-
  }
 
 

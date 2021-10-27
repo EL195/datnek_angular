@@ -22,7 +22,7 @@ npm install @angular/animations --save
 Démarer le serveur backend
  1. git clone https://github.com/EL195/datnekBackend.git
  2. cd datnekBackend
- 3. Modifier votre .env pour la bd
+ 3. Modifier votre .env pour la bd. Si possible importer le fichier sql se trouvant sur la racine du projet frontend.
  4. Composer install
  5. php artisan serve
  6. lien ddu serveur : http://127.0.0.1:8000

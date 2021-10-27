@@ -10,7 +10,9 @@
                             <label>{{ 'lang.language' | translate }}</label>
                             <select  bindLabel="label" [multiple]="false" placeholder="Select" [(ngModel)]="langue" name="langue" class="form-select" aria-label="Default select example">
                                 <option selected>{{ 'lang.chooseElement' | translate }}</option>
-                                <option *ngFor="let item of elements" [value]="item.titre">{{item.titre}}</option>
+                                <option [value]="texting.french">{{ 'lang.french' | translate }}</option>
+                                <option [value]="texting.english">{{ 'lang.english' | translate }}</option>
+                                <option [value]="texting.nederlands">{{ 'lang.nederlands' | translate }}</option>
                             </select>
                         </div>
                         <div class="pb-2">
