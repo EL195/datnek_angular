@@ -33,5 +33,4 @@ Démarer le serveur frontend
 3. npm install
 4. ng serve
 5. run http://localhost:4200/
-6. Page sans api :  http://localhost:4200/other
 

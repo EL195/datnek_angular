@@ -3,51 +3,45 @@
         <!--Début du formulaire d'ajout des langues -->
         <div *ngIf="normal==true"  class="col-12 col-md-8">
             <h4>{{ 'lang.addLang' | translate }}</h4>
-            <form>
-                <div class="row align-items-start">
-                    <div class="col">
-                        <div class="pb-2">
-                            <label>{{ 'lang.language' | translate }}</label>
-                            <select  bindLabel="label" [multiple]="false" placeholder="Select" [(ngModel)]="langue" name="langue" class="form-select" aria-label="Default select example">
-                                <option selected>{{ 'lang.chooseElement' | translate }}</option>
-                                <option [value]="texting.french">{{ 'lang.french' | translate }}</option>
-                                <option [value]="texting.english">{{ 'lang.english' | translate }}</option>
-                                <option [value]="texting.nederlands">{{ 'lang.nederlands' | translate }}</option>
-                            </select>
-                        </div>
-                        <div class="pb-2">
-                            <label>{{ 'lang.levelWrote' | translate }}</label>
-                            <select bindLabel="label" [multiple]="false" placeholder="Select" [(ngModel)]="write" name="write" class="form-select" aria-label="Default select example">
-                                <option selected value="deafault">{{ 'lang.chooseElement' | translate }}</option>
-                                <option [value]="texting.intermediary">{{ 'lang.intermediary' | translate }}</option>
-                                <option [value]="texting.elementary">{{ 'lang.elementary' | translate }}</option>
-                                <option [value]="texting.current">{{ 'lang.current' | translate }}</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="pb-2">
-                            <label>{{ 'lang.levelSpoken' | translate }}</label>
-                            <select bindLabel="label" [multiple]="false" placeholder="Select" [(ngModel)]="speak" name="speak" class="form-select" aria-label="Default select example">
-                                <option selected value="deafault">{{ 'lang.chooseElement' | translate }}</option>
-                                <option [value]="texting.intermediary">{{ 'lang.intermediary' | translate }}</option>
-                                <option [value]="texting.elementary">{{ 'lang.elementary' | translate }}</option>
-                                <option [value]="texting.current">{{ 'lang.current' | translate }}</option>
-                            </select>
-                        </div>
-                        <div class="pb-2">
-                            <label>{{'lang.levelUndesrtood' | translate }}</label>
-                            <select bindLabel="label" [multiple]="false" placeholder="Select" [(ngModel)]="under" name="under" class="form-select" aria-label="Default select example">
-                                <option selected value="deafault">{{ 'lang.chooseElement' | translate }}</option>
-                                <option [value]="texting.intermediary">{{ 'lang.intermediary' | translate }}</option>
-                                <option [value]="texting.elementary">{{ 'lang.elementary' | translate }}</option>
-                                <option [value]="texting.current">{{ 'lang.current' | translate }}</option>
-                            </select>
-                        </div>
-                    </div>
+            <form class="row g-3">
+                <div class="col-md-6">
+                  <label class="form-label">{{ 'lang.language' | translate }}</label>
+                  <select  bindLabel="label" [multiple]="false" placeholder="Select" [(ngModel)]="langue" name="langue" class="form-select" aria-label="Default select example">
+                      <option selected>{{ 'lang.chooseElement' | translate }}</option>
+                      <option [value]="texting.french">{{ 'lang.french' | translate }}</option>
+                      <option [value]="texting.english">{{ 'lang.english' | translate }}</option>
+                      <option [value]="texting.nederlands">{{ 'lang.nederlands' | translate }}</option>
+                  </select>
                 </div>
-                <div class="pb-5">
-                        <button type="button" (click)="add()" class="btn btn-success">{{'lang.save' | translate }}</button>
+                <div class="col-md-6">
+                    <label class="form-label">{{ 'lang.levelWrote' | translate }}</label>
+                    <select  bindLabel="label" [multiple]="false" placeholder="Select" [(ngModel)]="write" name="write" class="form-select" aria-label="Default select example">
+                        <option selected value="deafault">{{ 'lang.chooseElement' | translate }}</option>
+                        <option [value]="texting.intermediary">{{ 'lang.intermediary' | translate }}</option>
+                        <option [value]="texting.elementary">{{ 'lang.elementary' | translate }}</option>
+                        <option [value]="texting.current">{{ 'lang.current' | translate }}</option>
+                    </select>
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label">{{ 'lang.levelSpoken' | translate }}</label>
+                    <select  bindLabel="label" [multiple]="false" placeholder="Select" [(ngModel)]="speak" name="speak" class="form-select" aria-label="Default select example">
+                        <option selected>{{ 'lang.chooseElement' | translate }}</option>
+                        <option [value]="texting.intermediary">{{ 'lang.intermediary' | translate }}</option>
+                        <option [value]="texting.elementary">{{ 'lang.elementary' | translate }}</option>
+                        <option [value]="texting.current">{{ 'lang.current' | translate }}</option>
+                    </select>
+                </div>
+                <div class="col-md-6">
+                      <label class="form-label">{{'lang.levelUndesrtood' | translate }}</label>
+                      <select  bindLabel="label" [multiple]="false" placeholder="Select" [(ngModel)]="under" name="under" class="form-select" aria-label="Default select example">
+                          <option selected value="deafault">{{ 'lang.chooseElement' | translate }}</option>
+                          <option [value]="texting.intermediary">{{ 'lang.intermediary' | translate }}</option>
+                          <option [value]="texting.elementary">{{ 'lang.elementary' | translate }}</option>
+                          <option [value]="texting.current">{{ 'lang.current' | translate }}</option>
+                      </select>
+                </div>
+                <div class="col-md-6 pb-5">
+                    <button type="button" (click)="add()" class="btn btn-success">{{'lang.save' | translate }}</button>
                 </div>
             </form>
         </div>
@@ -55,49 +49,45 @@
         <!--Début du formulaire de modification d'une langue-->
         <div *ngIf="normal==false"  class="col-12 col-md-8">
             <h4>{{ 'lang.updateL' | translate }}</h4>
-            <form>
-                <div class="row align-items-start">
-                    <div class="col">
-                        <div class="pb-2">
-                            <label>{{ 'lang.language' | translate }}</label>
-                            <select   [multiple]="false" placeholder="Select" [(ngModel)]="langue" name="langue" class="form-select" aria-label="Default select example">
-                                <option [value]="itemOne.titre" selected>{{itemOne.titre}}</option>
-                                <option *ngFor="let item of elements" [value]="item.titre">{{item.titre}}</option>
-                            </select>
-                        </div>
-                        <div class="pb-2">
-                            <label>{{ 'lang.levelWrote' | translate }}</label>
-                            <select  [multiple]="false" placeholder="Select" [(ngModel)]="write" name="write" class="form-select" aria-label="Default select example">
-                                <option selected [value]="itemOne.ecrit">{{itemOne.ecrit}}</option>
-                                <option [value]="texting.intermediary">{{ 'lang.intermediary' | translate }}</option>
-                                <option [value]="texting.elementary">{{ 'lang.elementary' | translate }}</option>
-                                <option [value]="texting.current">{{ 'lang.current' | translate }}</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="pb-2">
-                            <label>{{ 'lang.levelSpoken' | translate }}</label>
-                            <select  [multiple]="false" placeholder="Select" [(ngModel)]="speak" name="speak" class="form-select" aria-label="Default select example">
-                                <option selected [value]="itemOne.parle">{{itemOne.parle}}</option>
-                                <option [value]="texting.intermediary">{{ 'lang.intermediary' | translate }}</option>
-                                <option [value]="texting.elementary">{{ 'lang.elementary' | translate }}</option>
-                                <option [value]="texting.current">{{ 'lang.current' | translate }}</option>
-                            </select>
-                        </div>
-                        <div class="pb-2">
-                            <label>{{'lang.levelUndesrtood' | translate }}</label>
-                            <select bindLabel="label" [multiple]="false" placeholder="Select" [(ngModel)]="under" name="under" class="form-select" aria-label="Default select example">
-                                <option selected [value]="itemOne.comprehension">{{itemOne.comprehension}}</option>
-                                <option [value]="texting.intermediary">{{ 'lang.intermediary' | translate }}</option>
-                                <option [value]="texting.elementary">{{ 'lang.elementary' | translate }}</option>
-                                <option [value]="texting.current">{{ 'lang.current' | translate }}</option>
-                            </select>
-                        </div>
-                    </div>
+            <form class="row g-3">
+                <div class="col-md-6">
+                  <label class="form-label">{{ 'lang.language' | translate }}</label>
+                  <select  bindLabel="label" [multiple]="false" placeholder="Select" [(ngModel)]="langue" name="langue" class="form-select" aria-label="Default select example">
+                      <option [value]="itemOne.titre" selected>{{itemOne.titre}}</option>
+                      <option [value]="texting.french">{{ 'lang.french' | translate }}</option>
+                      <option [value]="texting.english">{{ 'lang.english' | translate }}</option>
+                      <option [value]="texting.nederlands">{{ 'lang.nederlands' | translate }}</option>
+                  </select>
                 </div>
-                <div class="pb-5">
-                        <button type="button" (click)="makeUpdate(itemOne)" class="btn btn-success">{{'lang.update' | translate }}</button>
+                <div class="col-md-6">
+                    <label class="form-label">{{ 'lang.levelWrote' | translate }}</label>
+                    <select  bindLabel="label" [multiple]="false" placeholder="Select" [(ngModel)]="write" name="write" class="form-select" aria-label="Default select example">
+                        <option selected [value]="itemOne.ecrit">{{itemOne.ecrit}}</option>
+                        <option [value]="texting.intermediary">{{ 'lang.intermediary' | translate }}</option>
+                        <option [value]="texting.elementary">{{ 'lang.elementary' | translate }}</option>
+                        <option [value]="texting.current">{{ 'lang.current' | translate }}</option>
+                    </select>
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label">{{ 'lang.levelSpoken' | translate }}</label>
+                    <select  bindLabel="label" [multiple]="false" placeholder="Select" [(ngModel)]="speak" name="speak" class="form-select" aria-label="Default select example">
+                        <option selected [value]="itemOne.parle">{{itemOne.parle}}</option>
+                        <option [value]="texting.intermediary">{{ 'lang.intermediary' | translate }}</option>
+                        <option [value]="texting.elementary">{{ 'lang.elementary' | translate }}</option>
+                        <option [value]="texting.current">{{ 'lang.current' | translate }}</option>
+                    </select>
+                </div>
+                <div class="col-md-6">
+                      <label class="form-label">{{'lang.levelUndesrtood' | translate }}</label>
+                      <select  bindLabel="label" [multiple]="false" placeholder="Select" [(ngModel)]="under" name="under" class="form-select" aria-label="Default select example">
+                        <option selected [value]="itemOne.comprehension">{{itemOne.comprehension}}</option>
+                          <option [value]="texting.intermediary">{{ 'lang.intermediary' | translate }}</option>
+                          <option [value]="texting.elementary">{{ 'lang.elementary' | translate }}</option>
+                          <option [value]="texting.current">{{ 'lang.current' | translate }}</option>
+                      </select>
+                </div>
+                <div class="col-md-6 pb-5">
+                    <button type="button" (click)="makeUpdate(itemOne)" class="btn btn-success">{{'lang.update' | translate }}</button>
                 </div>
             </form>
         </div>
