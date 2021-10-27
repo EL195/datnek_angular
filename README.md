@@ -46,3 +46,17 @@ https://getbootstrap.com/docs/5.1/
    - Liste des langues avec les niveaux
    - 
  - Base de données : datnek_database
+
+Démarer le serveur backnd
+ 1. git clone
+ 2. cd 
+ 3. php artisan serve
+ 4. lien de l'api on http://127.0.0.1:8000
+
+ ##  Page sans API 
+ - http://localhost:4200/other
+
+
+ ##  Notification 
+npm install ngx-toastr --save
+npm install @angular/animations --save

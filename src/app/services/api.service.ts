@@ -40,15 +40,24 @@ getData(url: string){
 }
 
 addData(url: string, data: any){
-  let token = localStorage.getItem('token');
-  console.log(token)
-  const headers = new HttpHeaders({
-    'Authorization': 'Bearer '+token
-  });
 let ll =environment.url+url;
-console.log(ll, data, {'headers':headers});
-return this.http.post(ll, data, {'headers':headers});
+console.log(ll, data);
+return this.http.post(ll, data);
 }
+
+
+delete(url: string){
+  let ll =environment.url+url;
+  console.log(ll);
+  return this.http.delete(ll);
+  }
+
+  update(url: string, data:any){
+    let ll =environment.url+url;
+    console.log(ll);
+    return this.http.put(ll, data);
+    }
+
 
 handleError(error: HttpErrorResponse) {
   // this.load.hideLoader();

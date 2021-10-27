@@ -11,17 +11,26 @@ import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 import {HttpClient, HttpClientModule} from '@angular/common/http';
 
+//Import des notifications
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ToastrModule } from 'ngx-toastr';
+
+import { OtherComponent } from './other/other.component';
+
 @NgModule({
   declarations: [
     AppComponent,
     AccueilComponent,
+    OtherComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
      // import du ngx-translate et le chargeur http
      HttpClientModule,
-     FormsModule,      
+     FormsModule, 
+     BrowserAnimationsModule,
+	   ToastrModule.forRoot(),     
      TranslateModule.forRoot({
          loader: {
              provide: TranslateLoader,

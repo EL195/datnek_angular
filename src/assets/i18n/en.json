@@ -6,7 +6,7 @@
         "chooseElement": "Choose an element",
         "levelWrote": "Level written",
         "levelSpoken": "Spoken level",
-        "levelUndesrtood": "Level of understanding",
+        "levelUndesrtood": "Understanding",
         "save": "Save",
         "languageCount": "Number of languages",
         "modalClosed": "Modal closed",
@@ -20,6 +20,11 @@
         "detail": "Detail",
         "french": "French",
         "english": "English",
-        "nederlands": "Dutch"
+        "nederlands": "Dutch",
+        "success": "Sucesshull added language!",
+        "warning": "The form is incorrect or Backend server is down.",
+        "successDel": "Successfull deleted language.",
+        "updateL": "Update language",
+        "updateS": "Successfuly modified language"
     }
 }

@@ -20,6 +20,11 @@
         "details": "details",
         "french": "Frans",
         "english": "Engels",
-        "nederlands": "nederlands"
+        "nederlands": "nederlands",
+        "success": "Sucesshull added language!",
+        "warning": "Le formulaire est incorrect ou le serveur est indisponible.",
+        "successDel": "Successfull deleted language.",
+        "updateL": "Update language",
+        "updateS": "Successfuly modified language"
     }
 }

@@ -6,13 +6,13 @@
         "chooseElement": "Choisir un élément",
         "levelWrote": "Niveau écrit",
         "levelSpoken": "Niveau parlé",
-        "levelUndesrtood": "Niveau de compréhension",
+        "levelUndesrtood": "Compréhension",
         "save": "Enregistrer",
         "languageCount": "Nombre de langues",
         "modalClosed": "Modal fermé",
         "modalOpened": "Modal overt",
         "languageList": "Liste des langues",
-        "intermediary": "Intermédiare",
+        "intermediary": "Intermédaire",
         "elementary": "Elémentaire",
         "current": "Courant",
         "delete": "Supprimer",
@@ -20,6 +20,11 @@
         "detail": "Détail",
         "french": "Français",
         "english": "Anglais",
-        "nederlands": "Néerlandais"
+        "nederlands": "Néerlandais",
+        "success": "Langue ajoutée avec succès!",
+        "warning": "Le formulaire est incorrect ou le serveur est indisponible.",
+        "successDel": "Langue supprimée avec succès.",
+        "updateL": "Modifier la langue",
+        "updateS": "Langue modifiée avec succès"
     }
 }
